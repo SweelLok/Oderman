@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
+  <link rel="icon" href="../static/photo/oderman.jpg">
+    <title>Weather in Kyiv</title>
+</head>
+<body>
+{% extends 'index.html' %}
+{% block content %}
+    <div class="weather-container">
+        <h1>Weather in Kyiv</h1>
+        {% if weather %}
+            <div class="weather-item"><span>Temperature:</span> {{ weather.temp }}°C</div>
+            <div class="weather-item"><span>Feels Like:</span> {{ weather.feels_like }}°C</div>
+            <div class="weather-item"><span>Min Temperature:</span> {{ weather.temp_min }}°C</div>
+            <div class="weather-item"><span>Max Temperature:</span> {{ weather.temp_max }}°C</div>
+            <div class="weather-item"><span>Weather:</span> {{ weather.weather_main }}</div>
+            <div class="weather-item"><span>Description:</span> {{ weather.weather_description }}</div>
+            <div class="weather-item"><span>Wind Speed:</span> {{ weather.wind_speed }} m/s</div>
+            <div class="weather-item"><span>Cloudiness:</span> {{ weather.clouds }}%</div>
+        {% else %}
+            <p>Could not retrieve weather data. Please try again later.</p>
+        {% endif %}
+    </div>
+{% endblock content %}
+</body>
+</html>
