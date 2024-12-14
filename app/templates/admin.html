@@ -19,13 +19,16 @@
     </tr>
     {% for pizza in pizzas %}
       <tr>
-        <td>{{ pizza[0] }}</td>
-        <td>{{ pizza[1] }}</td>
-        <td>{{ pizza[2] }} грн</td>
-        <td>{{ pizza[3] }} грн <a href="{{url_for('get_edit', pizza_id=pizza['id']) }}">
-        <span class="btn btn-warning">Edit</span>
-        </a>
-      </td>
+        <td style="position: relative;">
+          {{ pizza[0] }}</td>
+        <td style="position: relative;">
+          {{ pizza[1] }}</td>
+        <td style="position: relative;">
+          {{ pizza[2] }}</td>
+        <td style="position: relative;">
+          {{ pizza[3] }} грн <a href="{{url_for('get_edit', pizza_id=pizza['id']) }}">
+            <span class="btn btn-warning">Edit</span>
+            </a></td>
       </tr>
     {% endfor %}
 </table>
@@ -37,3 +40,7 @@
 {% endblock content %}
 </body>
 </html>
+
+
+
+

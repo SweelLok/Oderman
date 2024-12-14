@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/poll.css') }}">
+	<title>Poll</title>
+</head>
+<body>
+{% extends 'index.html' %}
+{% block content %}
+	<h1>Which pizza is the best?</h1>
+	<form action="/poll/" method="POST">
+		{% for e in data.fields %}
+		<input type="radio" name="field" value="{{e}}"> {{e}} <br>
+		{% endfor %}
+		<input type="submit" value="Vote">
+	</form>
+	<a href="{{url_for('get_results')}}">
+		<span class="btn btn-warning">Results</span>
+	</a>
+{% endblock content %}
+</body>
+</html>

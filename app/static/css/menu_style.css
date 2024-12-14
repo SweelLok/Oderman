@@ -8,7 +8,7 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin-bottom: 700px;
 }
 
 th, td {
@@ -17,13 +17,15 @@ th, td {
   border-bottom: 1px solid #ccc;
 }
 
-th {
-  background-color: #8ed593;
+th {  
+  background-color: #218838;
   color: white;
 }
 
 td {
   background-color: #ffffff;
+  position: absolute;
+  padding-right: 250px;
 }
 
 tr:hover td {
@@ -61,5 +63,29 @@ button[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.edit-pizza {
+  position: absolute;
+  right: 170px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
 }

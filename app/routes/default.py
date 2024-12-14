@@ -8,7 +8,7 @@ import jsonify
 def login_page():
     return render_template("login.html")
 
-
+    
 @app.get("/home")
 def home_page():
     return render_template("index.html",

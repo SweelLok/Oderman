@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+	<title>Results</title>
+</head>
+<body>
+{% extends 'index.html' %}
+{% block content %}
+	{% for key, value in total_count.items() %}
+	<h5>{{ key }} - {{ value }}</h5>
+	{% endfor %}
+{% endblock content %}
+</body>
+</html>
